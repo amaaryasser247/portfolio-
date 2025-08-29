@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: linear-gradient(to right, #01022d, #000000);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+}
+.profile-pic {
+   width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+  .profile-pic:hover {
+  opacity: 0.6;        
+  transform: scale(1.1); 
+  cursor: pointer;   
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #ff4b2b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff6f61;
+}
+
+#toggle { display: none; }
+.contact-info {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 16px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.2s;
+  padding: 0 10px;
+}
+#toggle:checked + .contact-info {
+  max-height: 260px; 
+  opacity: 1;
+  padding: 10px;
+}
+.contact-info a 
+{ 
+color: #ff6f61; text-decoration: none;
+}
+.close-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #444;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
